@@ -3085,7 +3085,7 @@ button.swiper-pagination-bullet {
 .main .geography .countryes .countryNumber__active {
     transition: all 0.3s;
     color: #00372E;
-    font-family: "SourceSansPro";
+    font-family: "NeoSansCyrRegular";
     font-size: 2rem;
 }
 
