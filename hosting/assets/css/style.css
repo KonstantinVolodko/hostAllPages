@@ -710,10 +710,6 @@ svg {
     transition: linear 0.2s;
 }
 
-.header .menuContainer .menuItems a:visited {
-    color: #D9BE8C;
-}
-
 .header .contactsContainer {
     display: -ms-flexbox;
     display: flex;
@@ -1956,6 +1952,79 @@ button.swiper-pagination-bullet {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden;
+}
+
+.upBtn {
+    font-family: NeoSansCyrRegular;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #fff;
+    text-shadow: 0.4rem 0.5rem 0.4rem rgba(0, 0, 0, 0.4);
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    text-decoration: none;
+    z-index: 4;
+    border-radius: 50%;
+    background-color: #00372E;
+    width: 10rem;
+    height: 10rem;
+    display: none;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: none;
+    -webkit-animation: pulse 2.5s linear infinite;
+    animation: pulse 2.5s linear infinite;
+}
+
+@media (max-width: 780px) {
+    .upBtn {
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.upBtn:hover {
+    color: #D9BE8C;
+    transition: linear 0.2s;
 }
 
 .main {
@@ -3214,10 +3283,6 @@ button.swiper-pagination-bullet {
 .footer .firstContainer .navigation a:hover {
     color: #D9BE8C;
     transition: linear 0.2s;
-}
-
-.footer .firstContainer .navigation a:visited {
-    color: #D9BE8C;
 }
 
 .footer .firstContainer .helpContainer {
