@@ -618,7 +618,7 @@ svg {
 }
 @media (max-width: 1600px) {
   .header .menuContainer {
-    margin-right: 21.2rem;
+    margin-right: 18.2rem;
   }
 }
 @media (max-width: 1440px) {
@@ -685,6 +685,13 @@ svg {
 .header .contactsContainer .languageContainer {
   display: flex;
   gap: 1.5rem;
+}
+.header .contactsContainer .languageContainer div a {
+  text-shadow: 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+.header .contactsContainer .languageContainer div .active {
+  text-shadow: none;
+  filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
 }
 @media (max-width: 500px) {
   .header .contactsContainer .languageContainer {
@@ -768,6 +775,7 @@ svg {
 }
 .header .contactsContainer .phoneContainer .imgContainer a {
   cursor: pointer;
+  filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
 }
 .header .contactsContainer .phoneContainer .imgContainer a svg {
   width: 1.9rem;
@@ -780,6 +788,7 @@ svg {
   color: #FFFFFF;
   font-family: "NeoSansCyrRegular";
   text-decoration: none;
+  text-shadow: 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 650px) {
   .header .contactsContainer .phoneContainer .phone {
@@ -1853,7 +1862,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   border-bottom: 0.2rem solid #043930;
   box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
-  background: url(../images/main/bg1elem.png) bottom left no-repeat, url(../images/main/bg2Elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
+  background: url(../images/main/bg1elem.png) bottom left no-repeat, url(../images/main/bg2elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
 }
 @media (max-width: 1330px) {
   .main .statBlock {
@@ -2067,7 +2076,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   border-bottom: 0.2rem solid #043930;
   box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
-  background: url(../images/main/bg3elem.png) bottom left no-repeat, url(../images/main/bg4Elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
+  background: url(../images/main/bg3elem.png) bottom left no-repeat, url(../images/main/bg4elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
   padding-top: 2rem;
   padding-bottom: 1.6rem;
 }
@@ -2231,7 +2240,7 @@ button.swiper-pagination-bullet {
 .main .formContainer {
   border-bottom: 0.2rem solid #043930;
   box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
-  background: url(../images/main/bg5Elem.png) bottom left no-repeat, url(../images/main/bg6Elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
+  background: url(../images/main/bg5elem.png) bottom left no-repeat, url(../images/main/bg6elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
   padding-top: 0.8rem;
   padding-bottom: 2.2rem;
 }
@@ -2758,7 +2767,7 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   padding-left: 10rem;
   padding-right: 10rem;
-  background: url(../images/main/bg7Elem.png) bottom left no-repeat, url(../images/main/bg8Elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
+  background: url(../images/main/bg7elem.png) bottom left no-repeat, url(../images/main/bg8elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
   padding-top: 2.9rem;
   padding-bottom: 1.2rem;
 }
@@ -2868,12 +2877,17 @@ button.swiper-pagination-bullet {
   align-items: center;
   gap: 0.3rem;
 }
+.footer .firstContainer .phone .contactsContainer div a {
+  filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
+}
 .footer .firstContainer .phone .contactsContainer .number {
   font-size: 2.2rem;
   line-height: 2.5rem;
   color: #FFFFFF;
   padding-left: 0.8rem;
   text-decoration: none;
+  text-shadow: 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5);
+  filter: none;
 }
 @media (max-width: 850px) {
   .footer .firstContainer .phone .contactsContainer .number {
@@ -2891,6 +2905,9 @@ button.swiper-pagination-bullet {
   display: flex;
   gap: 1.3rem;
   padding-left: 2rem;
+}
+.footer .firstContainer .phone .contactsContainer .emailContainer div {
+  filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
 }
 .footer .firstContainer .phone .contactsContainer .emailText {
   font-family: "NeoSansCyrLight";
