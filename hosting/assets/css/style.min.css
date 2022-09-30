@@ -549,6 +549,16 @@ svg {
   padding-top: 2rem;
   padding-bottom: 2rem;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+@media (max-width: 780px) {
+  .header {
+    position: unset;
+  }
 }
 @media (max-width: 1600px) {
   .header {
@@ -638,7 +648,7 @@ svg {
   line-height: 2.4rem;
   letter-spacing: 0.01em;
   color: #D9BE8C;
-  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 0.4rem 0.5rem 0.4rem rgba(0, 0, 0, 0.4);
 }
 .header .menuContainer .menuItems {
   display: flex;
@@ -654,10 +664,12 @@ svg {
   text-transform: uppercase;
   color: #FFFFFF;
   text-decoration: none;
-  font-family: "NeoSansCyrLight";
+  font-family: "NeoSansCyrRegular";
+  text-shadow: 0.4rem 0.5rem 0.4rem rgba(0, 0, 0, 0.4);
 }
 .header .menuContainer .menuItems a:hover {
-  text-decoration: underline;
+  color: #D9BE8C;
+  transition: linear 0.2s;
 }
 .header .contactsContainer {
   display: flex;
@@ -703,10 +715,14 @@ svg {
   height: 1.6rem;
 }
 .header .contactsContainer .languageContainer button:hover {
-  background: linear-gradient(180deg, #DEBF82 0%, #d6b26f 100%);
+  transition: linear 0.3s;
+  opacity: 0.95;
+}
+.header .contactsContainer .languageContainer button:active {
+  filter: none;
 }
 .header .contactsContainer .languageContainer div a {
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
   font-style: normal;
   font-weight: 600;
   font-size: 1.8rem;
@@ -761,7 +777,7 @@ svg {
   font-size: 2.2rem;
   line-height: 2.5rem;
   color: #FFFFFF;
-  font-family: "NeoSansCyrRegular";
+  font-family: "SourceSansPro";
   text-decoration: none;
 }
 @media (max-width: 650px) {
@@ -770,7 +786,11 @@ svg {
   }
 }
 .header .contactsContainer .phoneContainer .phone:hover {
-  text-decoration: underline;
+  color: #D9BE8C;
+  transition: linear 0.2s;
+}
+.header .contactsContainer .phoneContainer .phone:visited {
+  color: #D9BE8C;
 }
 
 .menu {
@@ -816,7 +836,7 @@ svg {
   line-height: 2.4rem;
   letter-spacing: 0.01em;
   color: #D9BE8C;
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -934,7 +954,7 @@ form .licenceContainer {
   }
 }
 form .licenceContainer .licence p {
-  font-family: "NeoSansCyrRegular";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 1.3rem;
@@ -1732,8 +1752,57 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+.upBtn {
+  font-family: NeoSansCyrRegular;
+  font-size: 1.5rem;
+  line-height: 1rem;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #fff;
+  text-shadow: 0.4rem 0.5rem 0.4rem rgba(0, 0, 0, 0.4);
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  text-decoration: none;
+  z-index: 4;
+  border-radius: 50%;
+  background-color: #00372E;
+  width: 10rem;
+  height: 10rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  animation: pulse 2.5s linear infinite;
+}
+@media (max-width: 780px) {
+  .upBtn {
+    display: flex;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.upBtn:hover {
+  color: #D9BE8C;
+  transition: linear 0.2s;
+}
+
 .main {
   font-family: "NeoSansCyrLight";
+}
+.main .firstSliderBlock {
+  margin-top: 0.3rem;
+  background: #ffe4bf;
 }
 @media (max-width: 500px) {
   .main .firstSliderBlock .mySwiper .swiper-button-next, .main .firstSliderBlock .mySwiper .swiper-button-prev {
@@ -1773,7 +1842,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   border-bottom: 0.2rem solid #043930;
   box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
-  background: url(../images/main/backgroundElement1.png) bottom left no-repeat, url(../images/main/backgroundElement2.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
+  background: url(../images/main/bgElem1.png) bottom left no-repeat, url(../images/main/bgElem2.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
 }
 @media (max-width: 1330px) {
   .main .statBlock {
@@ -1836,7 +1905,7 @@ button.swiper-pagination-bullet {
   text-align: center;
   letter-spacing: 0.03em;
   color: #FFFFFF;
-  text-shadow: 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.4);
+  text-shadow: 0.4rem 0.5rem 0.4rem rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 1024px) {
   .main .statBlock div .title {
@@ -1859,8 +1928,8 @@ button.swiper-pagination-bullet {
   line-height: 2.2rem;
   text-align: center;
   color: #D9BE8C;
-  text-shadow: 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.4);
   text-align: center;
+  text-shadow: 0.4rem 0.5rem 0.4rem rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 1024px) {
   .main .statBlock div .subtitle {
@@ -1986,7 +2055,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   border-bottom: 0.2rem solid #043930;
   box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
-  background: url(../images/main/backgroundElement1.png) bottom left no-repeat, url(../images/main/backgroundElement2.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
+  background: url(../images/main/bgElem3.png) bottom left no-repeat, url(../images/main/bgElem4.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
   padding-top: 2rem;
   padding-bottom: 1.6rem;
 }
@@ -2018,7 +2087,7 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FFFFFF;
-  text-shadow: 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.4);
+  text-shadow: 0.4rem 0.5rem 0.4rem rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 850px) {
   .main .statBlockSecond .title {
@@ -2137,10 +2206,13 @@ button.swiper-pagination-bullet {
     line-height: 120%;
   }
 }
+.main .servicesBlock .contentBlock .secContent {
+  width: 53%;
+}
 .main .formContainer {
   border-bottom: 0.2rem solid #043930;
   box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
-  background: url(../images/main/backgroundElement1.png) bottom left no-repeat, url(../images/main/backgroundElement2.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
+  background: url(../images/main/bgElem5.png) bottom left no-repeat, url(../images/main/bgElem6.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
   padding-top: 0.8rem;
   padding-bottom: 2.2rem;
 }
@@ -2152,7 +2224,7 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FFFFFF;
-  text-shadow: 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.4);
+  text-shadow: 0.4rem 0.5rem 0.4rem rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 850px) {
   .main .formContainer .title {
@@ -2166,7 +2238,6 @@ button.swiper-pagination-bullet {
 }
 .main .formContainer .subtitle {
   font-size: 1.8rem;
-  line-height: 2.5rem;
   text-align: center;
   color: #FFFFFF;
 }
@@ -2208,6 +2279,7 @@ button.swiper-pagination-bullet {
   gap: 1.7rem;
   justify-content: center;
   margin-top: 1.8rem;
+  flex-wrap: wrap;
 }
 @media (max-width: 1024px) {
   .main .formContainer form div {
@@ -2272,7 +2344,11 @@ button.swiper-pagination-bullet {
   fill: transparent;
 }
 .main .formContainer form button:hover {
-  background: linear-gradient(180deg, #DEBF82 0%, #d6b26f 100%);
+  transition: linear 0.3s;
+  opacity: 0.95;
+}
+.main .formContainer form button:active {
+  filter: none;
 }
 .main .formContainer form .licence {
   font-weight: 400;
@@ -2348,7 +2424,7 @@ button.swiper-pagination-bullet {
   line-height: 5rem;
   transition: all 0.3s;
   color: #00372E;
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
   font-size: 5rem;
   width: min-content;
   top: 29%;
@@ -2649,7 +2725,7 @@ button.swiper-pagination-bullet {
 .main .geography .countryes .countryNumber__active {
   transition: all 0.3s;
   color: #00372E;
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
   font-size: 2rem;
 }
 
@@ -2659,7 +2735,7 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   padding-left: 10rem;
   padding-right: 10rem;
-  background: url(../images/main/backgroundElement1.png) bottom left no-repeat, url(../images/main/backgroundElement2.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
+  background: url(../images/main/bgElem7.png) bottom left no-repeat, url(../images/main/bgElem8.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
   padding-top: 2.9rem;
   padding-bottom: 1.2rem;
 }
@@ -2704,6 +2780,8 @@ button.swiper-pagination-bullet {
   }
 }
 .footer .firstContainer .navigation a {
+  font-style: normal;
+  font-weight: 400;
   font-size: 1.8rem;
   line-height: 2.2rem;
   text-align: center;
@@ -2711,15 +2789,49 @@ button.swiper-pagination-bullet {
   text-transform: uppercase;
   color: #FFFFFF;
   text-decoration: none;
+  font-family: "NeoSansCyrRegular";
+  text-shadow: 0.4rem 0.5rem 0.4rem rgba(0, 0, 0, 0.4);
 }
 .footer .firstContainer .navigation a:hover {
-  text-decoration: underline;
+  color: #D9BE8C;
+  transition: linear 0.2s;
 }
 .footer .firstContainer .helpContainer {
   display: flex;
 }
 .footer .firstContainer .helpContainer .btnContainer {
   padding-top: 1.3rem;
+}
+.footer .firstContainer .helpContainer .btnContainer button {
+  background: linear-gradient(180deg, #DEBF82 0%, #B7975A 100%);
+  font-family: "NeoSansCyrRegular";
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  text-align: center;
+  color: #00372E;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.5));
+}
+@media (max-width: 650px) {
+  .footer .firstContainer .helpContainer .btnContainer button {
+    font-size: 1.5rem;
+  }
+}
+.footer .firstContainer .helpContainer .btnContainer button svg {
+  fill: transparent;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.footer .firstContainer .helpContainer .btnContainer button:hover {
+  transition: linear 0.3s;
+  opacity: 0.95;
+}
+.footer .firstContainer .helpContainer .btnContainer button:active {
+  filter: none;
 }
 .footer .firstContainer .phone .contactsContainer {
   display: flex;
@@ -2728,7 +2840,7 @@ button.swiper-pagination-bullet {
   padding-top: 1rem;
 }
 .footer .firstContainer .phone .contactsContainer div {
-  font-family: "NeoSansCyrRegular";
+  font-family: "SourceSansPro";
   display: flex;
   align-items: center;
   gap: 0.3rem;
@@ -2746,7 +2858,11 @@ button.swiper-pagination-bullet {
   }
 }
 .footer .firstContainer .phone .contactsContainer .number:hover {
-  text-decoration: underline;
+  color: #D9BE8C;
+  transition: linear 0.2s;
+}
+.footer .firstContainer .phone .contactsContainer .number:visited {
+  color: #D9BE8C;
 }
 .footer .firstContainer .phone .contactsContainer .emailContainer {
   display: flex;
@@ -2874,7 +2990,7 @@ button.swiper-pagination-bullet {
   padding-left: 10rem;
   padding-top: 1.1rem;
   padding-bottom: 1.2rem;
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro2";
   font-size: 1.4rem;
   line-height: 1.8rem;
   letter-spacing: 0.05em;
@@ -2887,7 +3003,7 @@ button.swiper-pagination-bullet {
   }
 }
 .underHeader .crumb a {
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro2";
   font-size: 1.4rem;
   line-height: 1.8rem;
   letter-spacing: 0.05em;
@@ -2903,7 +3019,7 @@ button.swiper-pagination-bullet {
 }
 
 .aboutCompany {
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
 }
 .aboutCompany .mainContainer {
   background: url(../images/main/backgroundElement3.png) left bottom no-repeat, url(../images/main/backgroundElem4.png) right top no-repeat;
@@ -2928,12 +3044,6 @@ button.swiper-pagination-bullet {
   font-family: "NeoSansCyrMedium";
   padding-left: 21.5rem;
   padding-right: 21.5rem;
-}
-@media (max-width: 1330px) {
-  .aboutCompany .mainContainer .subtitle {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
 }
 @media (max-width: 1024px) {
   .aboutCompany .mainContainer .subtitle {
@@ -2960,12 +3070,6 @@ button.swiper-pagination-bullet {
   gap: 4.5rem;
   align-items: center;
 }
-@media (max-width: 1330px) {
-  .aboutCompany .mainContainer .contentContainer .item {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-}
 @media (max-width: 1024px) {
   .aboutCompany .mainContainer .contentContainer .item {
     padding-left: 1rem;
@@ -2984,7 +3088,7 @@ button.swiper-pagination-bullet {
   text-align: center;
   letter-spacing: 0.03em;
   color: #065749;
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
 }
 .aboutCompany .mainContainer .contentContainer .textContainer {
   display: flex;
@@ -2992,7 +3096,7 @@ button.swiper-pagination-bullet {
   gap: 1rem;
 }
 .aboutCompany .mainContainer .contentContainer .textContainer .title {
-  font-family: "NeoSansCyrMedium";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -3008,7 +3112,7 @@ button.swiper-pagination-bullet {
 }
 
 .services {
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
   background: url(../images/main/backgroundElement3.png) left bottom no-repeat, url(../images/main/backgroundElem4.png) right top no-repeat;
 }
 .services .title {
@@ -3091,7 +3195,7 @@ button.swiper-pagination-bullet {
   line-height: 2.6rem;
   color: #065749;
   text-align: inherit;
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
   text-transform: inherit;
   margin-bottom: 2.1rem;
 }
@@ -3128,7 +3232,7 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.03em;
   color: #000000;
   mix-blend-mode: multiply;
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
   padding-left: 21.5rem;
   padding-right: 21.5rem;
 }
@@ -3167,7 +3271,7 @@ button.swiper-pagination-bullet {
   }
 }
 .products .navContainer button {
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro2";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3201,7 +3305,7 @@ button.swiper-pagination-bullet {
   background: #f6ead9;
 }
 .products .navContainer .active {
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
   background: linear-gradient(180deg, #DEBF82 0%, #B7975A 100%);
   font-size: 1.8rem;
   line-height: 2.5rem;
@@ -3235,7 +3339,7 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 .products .contentContainer .productItem .text {
-  font-family: "NeoSansCyrMedium";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
@@ -3291,7 +3395,7 @@ button.swiper-pagination-bullet {
   }
 }
 .productsItem .navContainer button {
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro2";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3325,7 +3429,7 @@ button.swiper-pagination-bullet {
   background: #f6ead9;
 }
 .productsItem .navContainer .active {
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
   background: linear-gradient(180deg, #DEBF82 0%, #B7975A 100%);
   font-size: 1.8rem;
   line-height: 2.5rem;
@@ -3368,7 +3472,7 @@ button.swiper-pagination-bullet {
   gap: 2.8rem;
 }
 .productsItem .contentContainer .textContainer .title {
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
   font-size: 3.2rem;
   line-height: 4.4rem;
   color: #065749;
@@ -3380,13 +3484,13 @@ button.swiper-pagination-bullet {
   gap: 0.4rem;
 }
 .productsItem .contentContainer .textContainer .subtitle p {
-  font-family: "NeoSansCyrLight";
+  font-family: "SourceSansPro2";
   font-size: 1.6rem;
   line-height: 2.8rem;
   color: #606060;
 }
 .productsItem .contentContainer .textContainer .subtitle span {
-  font-family: "NeoSansCyrRegular";
+  font-family: "SourceSansPro";
   color: #000000;
 }
 
@@ -3410,7 +3514,7 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.03em;
   color: #000000;
   mix-blend-mode: multiply;
-  font-family: "NeoSansCyrMedium";
+  font-family: "SourceSansPro";
   padding-left: 21.5rem;
   padding-right: 21.5rem;
 }
@@ -3519,7 +3623,7 @@ button.swiper-pagination-bullet {
   }
 }
 .contacts .contentContainer .rightContainer .title {
-  font-family: "NeoSansCyrMedium";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -3560,7 +3664,7 @@ button.swiper-pagination-bullet {
   }
 }
 .contacts .contentContainer .rightContainer form .licenceContainer .licence p {
-  font-family: "NeoSansCyrRegular";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 1.3rem;
@@ -3594,8 +3698,8 @@ button.swiper-pagination-bullet {
   height: 1.6rem;
 }
 
-.hide {
-  display: none;
+.hide11 {
+  transform: translateY(-100%);
 }
 
 .show {
