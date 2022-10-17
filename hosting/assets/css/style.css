@@ -2400,6 +2400,10 @@ button.swiper-pagination-bullet {
     margin-right: 18.2rem;
 }
 
+.main .secondSliderBlock .productsSlider img {
+    width: 35.2rem;
+}
+
 @media (max-width: 1330px) {
     .main .secondSliderBlock .productsSlider {
         margin-left: 10rem;
