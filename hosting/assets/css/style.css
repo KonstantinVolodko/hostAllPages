@@ -1,8 +1,10 @@
+@charset "UTF-8";
+
 @font-face {
     font-family: "NeoSansCyrItalic";
-    src: url("../fonts/NeoSansCyr-Italic.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
+  src: url("../fonts/NeoSansCyr-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
@@ -555,7 +557,7 @@ svg {
     border-bottom: 0.1rem solid #043930;
     box-shadow: 0px 0.3rem 0.4rem rgba(0, 0, 0, 0.4);
     padding-left: 10rem;
-    padding-right: 10rem;
+    padding-right: 14.6rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     -ms-flex-pack: justify;
@@ -575,15 +577,15 @@ svg {
 
 @media (max-width: 1600px) {
     .header {
-        -ms-flex-pack: unset;
-        justify-content: unset;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
     }
 }
 
 @media (max-width: 1330px) {
     .header {
         padding-left: 3rem;
-        padding-right: 3rem;
+        padding-right: 8rem;
     }
 }
 
@@ -646,7 +648,7 @@ svg {
 
 @media (max-width: 1600px) {
     .header .menuContainer {
-        margin-right: 21.2rem;
+        margin-right: 16.2rem;
     }
 }
 
@@ -658,7 +660,7 @@ svg {
 
 @media (max-width: 1330px) {
     .header .menuContainer {
-        margin-right: 15rem;
+        margin-right: 7rem;
     }
 }
 
@@ -730,6 +732,16 @@ svg {
     display: -ms-flexbox;
     display: flex;
     gap: 1.5rem;
+}
+
+.header .contactsContainer .languageContainer div a {
+    text-shadow: 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.header .contactsContainer .languageContainer div .active {
+    text-shadow: none;
+    -webkit-filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
 }
 
 @media (max-width: 500px) {
@@ -840,6 +852,8 @@ svg {
 
 .header .contactsContainer .phoneContainer .imgContainer a {
     cursor: pointer;
+    -webkit-filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
 }
 
 .header .contactsContainer .phoneContainer .imgContainer a svg {
@@ -854,6 +868,7 @@ svg {
     color: #FFFFFF;
     font-family: "NeoSansCyrRegular";
     text-decoration: none;
+    text-shadow: 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 650px) {
@@ -1967,6 +1982,92 @@ button.swiper-pagination-bullet {
     overflow: hidden;
 }
 
+#myBtn {
+    display: none;
+}
+
+.modal-content {
+    width: 40%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.okBtn {
+    border: none;
+    background: linear-gradient(180deg, #DEBF82 0%, #B7975A 100%);
+    font-family: "Neo Sans Pro Cyr";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #606060;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.declineBtn {
+    border: none;
+    font-family: "Neo Sans Pro Cyr";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #606060;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.cookieText {
+    font-family: "Neo Sans Pro Cyr";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #606060;
+}
+
+.modal {
+    display: none;
+  /* Скрыто по умолчанию */
+    position: fixed;
+  /* Оставаться на месте */
+    z-index: 111111;
+  /* Сидеть на вершине */
+    padding-top: 100px;
+  /* Расположение коробки */
+    left: 0;
+    top: 0;
+    width: 100%;
+  /* Полная ширина */
+    height: 100%;
+  /* Полная высота */
+    overflow: auto;
+  /* Включите прокрутку, если это необходимо */
+    background-color: rgb(0, 0, 0);
+  /* Цвет запасной вариант  */
+    background-color: rgba(0, 0, 0, 0.4);
+  /*Черный с непрозрачностью */
+}
+
+/* Кнопка закрытия */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .upBtn {
     font-family: NeoSansCyrRegular;
     font-size: 1.5rem;
@@ -2046,7 +2147,14 @@ button.swiper-pagination-bullet {
 
 .main .firstSliderBlock {
     margin-top: 0.3rem;
+    margin-top: 10rem;
     background: #ffe4bf;
+}
+
+@media (max-width: 780px) {
+    .main .firstSliderBlock {
+        margin-top: 0rem;
+    }
 }
 
 @media (max-width: 500px) {
@@ -2358,7 +2466,7 @@ button.swiper-pagination-bullet {
     width: 100%;
     border-bottom: 0.2rem solid #043930;
     box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
-    background: url(../images/main/bg3elem.png) bottom left no-repeat, url(../images/main/bg4Elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
+    background: url(../images/main/bg3elem.png) bottom left no-repeat, url(../images/main/bg4elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
     padding-top: 2rem;
     padding-bottom: 1.6rem;
 }
@@ -2452,6 +2560,11 @@ button.swiper-pagination-bullet {
     gap: 3rem;
 }
 
+.main .servicesBlock .contentBlock div img {
+    width: 32rem;
+    border-radius: 2rem;
+}
+
 .main .servicesBlock .contentBlock div div:hover img {
     cursor: pointer;
     scale: 1.1;
@@ -2465,7 +2578,7 @@ button.swiper-pagination-bullet {
     }
 }
 
-@media (max-width: 1170px) {
+@media (max-width: 1330px) {
     .main .servicesBlock .contentBlock {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2557,7 +2670,7 @@ button.swiper-pagination-bullet {
 .main .formContainer {
     border-bottom: 0.2rem solid #043930;
     box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
-    background: url(../images/main/bg5Elem.png) bottom left no-repeat, url(../images/main/bg6Elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
+    background: url(../images/main/bg5elem.png) bottom left no-repeat, url(../images/main/bg6elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
     padding-top: 0.8rem;
     padding-bottom: 2.2rem;
 }
@@ -2636,12 +2749,13 @@ button.swiper-pagination-bullet {
 .main .formContainer form div {
     display: -ms-flexbox;
     display: flex;
-    gap: 1.7rem;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     margin-top: 1.8rem;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    padding-left: 14.6rem;
+    padding-right: 14.6rem;
 }
 
 @media (max-width: 1024px) {
@@ -2650,6 +2764,13 @@ button.swiper-pagination-bullet {
         flex-direction: column;
         -ms-flex-align: center;
         align-items: center;
+    }
+}
+
+@media (max-width: 1330px) {
+    .main .formContainer form div {
+        padding-left: 8rem;
+        padding-right: 8rem;
     }
 }
 
@@ -2664,7 +2785,7 @@ button.swiper-pagination-bullet {
     color: #FFFFFF;
     border: 0.1rem solid #8b6f4b;
     background: #065749;
-    width: 20%;
+    width: 23%;
     padding-top: 1.6rem;
     padding-bottom: 1.4rem;
     padding-left: 1.4rem;
@@ -2675,6 +2796,12 @@ button.swiper-pagination-bullet {
 @media (max-width: 1330px) {
     .main .formContainer form div input {
         width: 27%;
+    }
+}
+
+@media (max-width: 1330px) {
+    .main .formContainer form div input {
+        width: 22%;
     }
 }
 
@@ -2690,6 +2817,13 @@ button.swiper-pagination-bullet {
 
 .main .formContainer form div input::-moz-placeholder {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.main .formContainer form .formButton {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .main .formContainer form button {
@@ -3237,7 +3371,7 @@ button.swiper-pagination-bullet {
     flex-direction: column;
     padding-left: 10rem;
     padding-right: 10rem;
-    background: url(../images/main/bg7Elem.png) bottom left no-repeat, url(../images/main/bg8Elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
+    background: url(../images/main/bg7elem.png) bottom left no-repeat, url(../images/main/bg8elem.png) top right no-repeat, linear-gradient(180deg, #12A58A 0%, #00634F 100%);
     padding-top: 2.9rem;
     padding-bottom: 1.2rem;
 }
@@ -3380,12 +3514,20 @@ button.swiper-pagination-bullet {
     gap: 0.3rem;
 }
 
+.footer .firstContainer .phone .contactsContainer div a {
+    -webkit-filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
+}
+
 .footer .firstContainer .phone .contactsContainer .number {
     font-size: 2.2rem;
     line-height: 2.5rem;
     color: #FFFFFF;
     padding-left: 0.8rem;
     text-decoration: none;
+    text-shadow: 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5);
+    -webkit-filter: none;
+    filter: none;
 }
 
 @media (max-width: 850px) {
@@ -3408,6 +3550,11 @@ button.swiper-pagination-bullet {
     display: flex;
     gap: 1.3rem;
     padding-left: 2rem;
+}
+
+.footer .firstContainer .phone .contactsContainer .emailContainer div {
+    -webkit-filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
 }
 
 .footer .firstContainer .phone .contactsContainer .emailText {
@@ -3558,6 +3705,16 @@ button.swiper-pagination-bullet {
     height: 3rem;
 }
 
+.underHeader .upperContainer {
+    margin-top: 10rem;
+}
+
+@media (max-width: 780px) {
+    .underHeader .upperContainer {
+        margin-top: 0rem;
+    }
+}
+
 .underHeader .upperContainer img {
     width: 100%;
 }
@@ -3691,6 +3848,17 @@ button.swiper-pagination-bullet {
     font-family: "SourceSansPro";
 }
 
+.aboutCompany .mainContainer .contentContainer .imgContainer img {
+    cursor: pointer;
+    width: 40rem;
+    border-radius: 2rem;
+}
+
+.aboutCompany .mainContainer .contentContainer .imgContainer img:hover {
+    scale: 1.1;
+    transition: all linear 0.2s;
+}
+
 .aboutCompany .mainContainer .contentContainer .textContainer {
     display: -ms-flexbox;
     display: flex;
@@ -3719,6 +3887,15 @@ button.swiper-pagination-bullet {
 .services {
     font-family: "SourceSansPro";
     background: url(../images/main/backgroundElement3.png) left bottom no-repeat, url(../images/main/backgroundElem4.png) right top no-repeat;
+}
+
+.services img {
+    cursor: pointer;
+}
+
+.services img:hover {
+    scale: 1.1;
+    transition: all linear 0.2s;
 }
 
 .services .title {
@@ -4282,6 +4459,16 @@ button.swiper-pagination-bullet {
 
 .contacts .contentContainer .leftContainer .item:last-child {
     margin-top: 2rem;
+}
+
+.contacts .contentContainer .leftContainer .requesitsContainer {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.contacts .contentContainer .leftContainer .requesitsContainer img {
+    width: 7%;
 }
 
 .contacts .contentContainer .leftContainer .item {
